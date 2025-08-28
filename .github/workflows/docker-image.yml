@@ -20,9 +20,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
-      - name: build and push docker image
-        uses: docker/build-push-action@v3
+      - name: Build and push Docker image (manual)
         run: |
-          docker buildx create --use
-          docker buildx build --push --tag ${{ secrets.DOCKERHUB_USERNAME }}/supermario:latest .  
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/supermario:latest
+           docker buildx create --use
+           docker buildx build --push --tag ${{ secrets.DOCKERHUB_USERNAME }}/supermario:latest .
