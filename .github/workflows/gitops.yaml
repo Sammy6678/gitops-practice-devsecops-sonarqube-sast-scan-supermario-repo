@@ -3,7 +3,7 @@ name: "Run SAST Scan on SuperMario Game project"
 on: 
   push: 
     branches:
-      - maine
+      - main
 
 jobs: 
 
